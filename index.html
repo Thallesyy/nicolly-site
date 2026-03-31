@@ -400,7 +400,7 @@
     <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
 
-  <!-- músicas (somem até step-music) -->
+ 
   <div class="music-float pos-m1" id="m1">
     <div class="music-card">
       <p class="music-title">Música 1</p>
@@ -448,19 +448,19 @@
 
     <div class="envelope" id="envelope" onclick="abrirCarta()">💌</div>
 
-    <!-- step 1: coração -->
+ 
     <div class="step" id="step-heart">
       <div class="heart" onclick="explodir()"></div>
     </div>
 
-    <!-- step 2: texto -->
+    
     <div class="step" id="step-text">
       <div class="carta">
         <p id="texto"></p>
       </div>
     </div>
 
-    <!-- step 3: fotos + final -->
+   
     <div class="step" id="step-photos">
       <div class="galeria">
         <img src="foto1.jpg" class="foto" onclick="abrirFoto(this)" alt="Foto 1">
@@ -472,7 +472,7 @@
       <div class="final">
         <p>Te ganhei né?</p>
         <div class="final-actions">
-          <button onclick="alert('sabia 😎')">Sim</button>
+          <button onclick="alert('sabia ')">Sim</button>
           <button class="foge" onmouseover="fugir(this)">Não né</button>
         </div>
       </div>
@@ -535,25 +535,25 @@
   });
 
   function abrirCarta() {
-    // some o envelope
+   
     document.getElementById("envelope").classList.add("sumiu");
 
-    // step 1: coração
+
     document.getElementById("step-heart").classList.add("show");
     document.querySelector(".heart").classList.add("batida-forte");
 
-    // toca uma música aleatória (tentativa)
+    
     tocarAleatoria();
 
-    // step 2: texto (depois de um tempinho)
+   
     setTimeout(() => {
       document.getElementById("step-text").classList.add("show");
       digitarTexto(() => {
-        // step 3: fotos e pergunta
+      
         setTimeout(() => {
           document.getElementById("step-photos").classList.add("show");
 
-          // step 4: músicas por último
+          
           setTimeout(() => {
             document.getElementById("m1").classList.add("show");
             document.getElementById("m2").classList.add("show");
